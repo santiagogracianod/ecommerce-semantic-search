@@ -1,0 +1,31 @@
+{
+    "name": "elasticsearch-dev-container",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "features": {
+        "ghcr.io/azure/azure-dev/azd:latest": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.azure-dev",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "github.copilot",
+                "github.copilot-chat",
+                "ms-azuretools.vscode-docker",
+                "esbenp.prettier-vscode"
+            ],
+            "settings": {
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true
+            }
+        }
+    },
+    "forwardPorts": [
+        8000 ,9200, 9300
+    ],
+    "remoteUser": "vscode"
+}
