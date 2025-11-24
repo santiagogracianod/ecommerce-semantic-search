@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     index_name: str = "productos"
     
     # External API
-    productos_api_url: str = "http://localhost:8001/api/v1/products"
+    productos_api_url: str = "http://localhost:8000/api/v1/products"
     
     # ML Model (renombrado para evitar conflicto)
     embedding_model_name: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
